@@ -5,7 +5,7 @@ public class Merge {
     sort(data, 0, data.length - 1);
   }
 
-  public static void sort(int[] data, int lo, int hi) {
+  private static void sort(int[] data, int lo, int hi) {
     //System.out.println(Arrays.toString(data) + " lo = "+lo+", hi = "+hi);
     if (lo >= hi) {
       return;
@@ -16,7 +16,7 @@ public class Merge {
     merge(data, lo, mid, hi);
   }
 
-  public static void merge(int[] data, int lo, int mid, int hi) {
+  private static void merge(int[] data, int lo, int mid, int hi) {
     //System.out.println("\tMerging "+ Arrays.toString(data)+" at "+lo+","+mid+","+hi);
     int[] data1 = new int[mid-lo+1];
     int[] data2 = new int[hi-mid];
