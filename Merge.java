@@ -16,8 +16,8 @@ public class Merge {
       return;
     }
     int mid = lo + (hi - lo) / 2;
-    sort(data, temp, lo, mid);
-    sort(data, temp, mid + 1, hi);
+    sort(temp, data, lo, mid);
+    sort(temp, data, mid + 1, hi);
     merge(data, temp, lo, mid, hi);
   }
 
@@ -47,6 +47,6 @@ public class Merge {
       j++;
     }
 
-    for (int k = lo; k <= hi; k++) temp[k] = data[k];
+    //for (int k = lo; k <= hi; k++) temp[k] = data[k];
   }
 }
